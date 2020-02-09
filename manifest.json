@@ -1,0 +1,30 @@
+{
+  "name": "redk-Outlook Notifier",
+  "description": "What Microsoft should have done.",
+  "version": "1.0",
+  "author": "Jorge Ortega",
+  "permissions": [
+    "notifications",
+    "tabs",
+    "https://outlook.office365.com/*",
+    "https://outlook.office.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+   "content_scripts": [
+    {
+      "matches": ["https://*.office365.com/*", "https://*.office.com/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons" : {
+    "48" : "icons8-microsoft-outlook-2019-48.png",
+    "96" : "icons8-microsoft-outlook-2019-96.png",
+    "144" : "icons8-microsoft-outlook-144.png"
+
+  },
+  "manifest_version": 2
+}
