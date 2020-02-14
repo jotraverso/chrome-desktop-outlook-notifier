@@ -52,6 +52,6 @@
             return false;
         else
             str = str.toString();
-        return str.replace(/^([^\x20-\x7E]+)\n?$/, '');
+        return str.replace(/^([^\x20-\x7E]+)/, '');
     }
 })(this);
